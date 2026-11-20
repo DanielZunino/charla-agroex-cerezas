@@ -1,0 +1,391 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Charla Packing Cerezas Agroex</title>
+<style>
+:root{--r:#D7262B;--r2:#EF5350;--v:#1B2A6B;--k:#3C9A3A;--fondo:#F1F4FA;--t:#18213F;--g:#5A6275}
+*{box-sizing:border-box}html,body{margin:0;height:100%;background:#123;font-family:Arial,Helvetica,sans-serif;color:var(--t);overflow:hidden}
+#esc{position:fixed;inset:0;display:flex;align-items:center;justify-content:center}
+#marco{width:min(100vw,177.78vh);height:min(56.25vw,100vh);position:relative;background:var(--fondo);overflow:hidden;font-size:min(1.6vw,2.85vh)}
+.s{position:absolute;inset:0;padding:3.2em 4em 4.4em;display:flex;flex-direction:column;opacity:0;visibility:hidden;transition:opacity .45s}
+.s.on{opacity:1;visibility:visible}
+.s.oscura{background:radial-gradient(circle at 20% 20%,#2F48A8,#111B47 70%);color:#fff;justify-content:center}
+.tit{display:flex;align-items:center;gap:.6em;margin-bottom:1.2em}
+.tit .ico{width:2.6em;height:2.6em;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;font-size:1.5em;box-shadow:0 .2em .6em rgba(0,0,0,.12)}
+.tit h2{margin:0;font-size:2.5em;color:var(--v)}
+.cuerpo{flex:1;display:flex;flex-direction:column;justify-content:center}
+.a{opacity:0;transform:translateY(1.2em)}
+.s.on .a{animation:sube .6s forwards}
+@keyframes sube{to{opacity:1;transform:none}}
+.s.on .a:nth-child(1){animation-delay:0.15s}.s.on .a:nth-child(2){animation-delay:0.27s}.s.on .a:nth-child(3){animation-delay:0.39s}.s.on .a:nth-child(4){animation-delay:0.51s}.s.on .a:nth-child(5){animation-delay:0.63s}.s.on .a:nth-child(6){animation-delay:0.75s}.s.on .a:nth-child(7){animation-delay:0.87s}.s.on .a:nth-child(8){animation-delay:0.99s}.s.on .a:nth-child(9){animation-delay:1.1099999999999999s}.s.on .a:nth-child(10){animation-delay:1.23s}
+.portada{text-align:center}.portada h1{font-size:3.6em;margin:.3em 0;line-height:1.1}.portada h1 span{color:#FFD7DC}
+.portada .logo{height:7.5em;width:auto;object-fit:contain;border-radius:1em;background:#fff;padding:.4em .6em;box-shadow:0 .4em 1.2em rgba(0,0,0,.35)}
+.portada .logo.chico{height:5em;width:auto;margin-top:1em}
+.kicker{font-size:1.5em;letter-spacing:.08em;text-transform:uppercase;color:#C9D6FF;margin-top:.8em}
+.emojis{font-size:3em;display:flex;gap:.4em;justify-content:center}.emojis span{display:inline-block;animation:bota 2.4s infinite}.emojis span:nth-child(2){animation-delay:.3s}.emojis span:nth-child(3){animation-delay:.6s}
+@keyframes bota{0%,100%{transform:translateY(0)}50%{transform:translateY(-.15em)}}
+.rel{font-size:1.2em;line-height:1.5;margin-top:1em;color:#E6ECFF}
+.grande{font-size:3em;font-weight:bold;color:var(--r);text-align:center;margin-bottom:.9em}
+.fila{display:flex;gap:1em;justify-content:center;flex-wrap:wrap}
+.chip{background:#fff;border-radius:1em;padding:.9em 1.2em;font-size:1.35em;font-weight:bold;display:flex;align-items:center;gap:.5em;box-shadow:0 .2em .6em rgba(0,0,0,.08)}.chip span{font-size:1.5em}
+.nota{margin-top:1.4em;background:#fff;border-radius:1em;padding:.8em 1.2em;font-size:1.25em;text-align:center;color:var(--v);font-weight:bold;box-shadow:0 .2em .6em rgba(0,0,0,.06)}
+.grid{display:grid;gap:1em}.grid.c3{grid-template-columns:repeat(3,1fr)}.grid.c4{grid-template-columns:repeat(4,1fr)}.grid.c2{grid-template-columns:repeat(2,1fr)}.grid.c5{grid-template-columns:repeat(5,1fr)}
+.card{background:#fff;border-radius:1.2em;padding:.9em;text-align:center;box-shadow:0 .25em .8em rgba(0,0,0,.08);display:flex;flex-direction:column;align-items:center;gap:.25em}
+.card .ce{font-size:2.8em}.card b{font-size:1.35em}.card small{font-size:1.05em;color:var(--g)}
+.pasos{display:flex;flex-direction:column;gap:.8em}
+.paso{display:flex;align-items:center;gap:1em;background:#fff;border-radius:1.2em;padding:.75em 1.2em;box-shadow:0 .2em .6em rgba(0,0,0,.07)}
+.num{width:2em;height:2em;flex:none;border-radius:50%;background:var(--r);color:#fff;font-weight:bold;font-size:1.3em;display:flex;align-items:center;justify-content:center}
+.pe{font-size:2.1em}.paso b{display:block;font-size:1.45em}.paso small{font-size:1.1em;color:var(--g)}
+.sino{display:grid;grid-template-columns:1fr 1fr;gap:1.4em}
+.col{border-radius:1.2em;padding:1em 1.4em;background:#fff;box-shadow:0 .25em .8em rgba(0,0,0,.08)}
+.col h3{margin:0 0 .5em;font-size:1.7em}.col p{margin:.45em 0;font-size:1.3em;padding-left:1.1em;position:relative}.col p:before{content:'•';position:absolute;left:0;font-weight:bold}
+.si h3{color:var(--v)}.si p:before{color:var(--k)}.no h3{color:var(--r)}.no p:before{color:var(--r2)}.de h3{color:#1F4E79}
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:1em}
+.nb{background:var(--r);color:#fff;border-radius:1.2em;padding:1em;text-align:center;box-shadow:0 .3em .9em rgba(215,38,43,.3)}.nb div{font-size:3.4em;font-weight:bold}.nb small{font-size:1.25em}
+
+.qrw{display:grid;grid-template-columns:auto 1fr;gap:2em;align-items:center}
+.qrbox{background:#fff;border-radius:1.2em;padding:1em;text-align:center;box-shadow:0 .25em .8em rgba(0,0,0,.1)}.qrbox svg{width:13em;height:13em;display:block;margin:auto}
+.qrt{font-weight:bold;color:var(--v);font-size:1em;max-width:14em;margin:0 auto .5em}
+.pasos.chico .paso{padding:.6em 1em}
+.quiz{display:flex;flex-direction:column;align-items:center;gap:1em}
+.qp{font-size:2.1em;font-weight:bold;text-align:center;min-height:2.6em}
+.qn{color:var(--g);font-size:1.1em}
+.qops{display:grid;grid-template-columns:1fr 1fr;gap:1.2em;width:100%}
+.qop{font:inherit;font-size:1.5em;font-weight:bold;padding:1em;border-radius:1em;border:.18em solid var(--v);background:#fff;color:var(--t);cursor:pointer;min-height:4.2em}
+.qop.ok{background:#E3F4D8;border-color:var(--k)}.qop.mal{background:#FDE3E6;border-color:var(--r);animation:mueve .4s}
+@keyframes mueve{25%{transform:translateX(-.3em)}75%{transform:translateX(.3em)}}
+.qres{font-size:1.6em;font-weight:bold;min-height:1.5em}
+.qsig{font:inherit;font-size:1.3em;padding:.6em 1.4em;border-radius:.8em;border:0;background:var(--r);color:#fff;font-weight:bold;cursor:pointer;visibility:hidden}
+#nav{position:absolute;left:0;right:0;bottom:0;height:3.6em;display:flex;align-items:center;justify-content:space-between;padding:0 1.6em;z-index:5}
+#nav button{font:inherit;font-size:1.2em;border:0;border-radius:.7em;padding:.45em .9em;background:rgba(255,255,255,.92);color:var(--v);font-weight:bold;cursor:pointer;box-shadow:0 .15em .5em rgba(0,0,0,.15)}
+#prog{position:absolute;left:0;top:0;height:.35em;background:linear-gradient(90deg,var(--r),var(--k));transition:width .4s;z-index:5}
+#pie{position:absolute;left:50%;bottom:1.25em;transform:translateX(-50%);font-size:.85em;color:var(--g);white-space:nowrap}
+.s.oscura~#nav #pie{color:#CFE8B8}
+#cont{font-size:1em;color:var(--g)}
+.flujo{display:flex;align-items:center;justify-content:center;gap:.35em}
+.fl{background:#fff;border-radius:1.2em;padding:.8em .5em;text-align:center;width:7.2em;box-shadow:0 .25em .8em rgba(0,0,0,.08)}.fl-c{font-size:2.6em}.fl b{font-size:1.1em;display:block;margin-top:.2em}
+.fl-f{font-size:1.8em;color:var(--r);font-weight:bold}
+.juego .jr{display:none}.juego.ver .jr{display:block}.juego.ver .jq{display:none}
+.jq{text-align:center}.jp{font-size:2.3em;font-weight:bold;color:var(--v);margin-bottom:.6em}
+.jb{display:flex;gap:1em;justify-content:center}.jv{font:inherit;font-size:2.2em;font-weight:bold;padding:.4em 1em;border-radius:.6em;border:.12em solid var(--v);background:#fff;color:var(--v);cursor:pointer;animation:pulso 1.8s infinite}
+.jv:hover{background:var(--v);color:#fff}.jn{margin-top:.9em;color:var(--g);font-size:1.1em}
+.jres{font-size:1.6em;font-weight:bold;margin-bottom:.5em}
+.firma{display:inline-block;margin-top:1em;background:#fff;color:var(--r);font-weight:bold;font-size:1.6em;padding:.6em 1.2em;border-radius:1em;box-shadow:0 .3em 1em rgba(0,0,0,.3)}
+.animw{display:grid;grid-template-columns:1.5fr 1fr;gap:1.4em;align-items:center}
+.animbox{background:#fff;border-radius:1.2em;padding:.5em;box-shadow:0 .25em .8em rgba(0,0,0,.1)}.esc svg{display:block;width:100%;height:auto;border-radius:.8em}
+.animw .paso b{font-size:1.3em}
+.s{transform:translateX(4%) scale(.98);transition:opacity .55s,transform .55s cubic-bezier(.2,.8,.2,1)}
+.s.on{transform:none}.s.sale{transform:translateX(-4%) scale(.98)}
+.lluvia{position:absolute;inset:0;overflow:hidden;pointer-events:none;z-index:0}
+.lluvia i{position:absolute;top:-10%;font-style:normal;animation:cae linear infinite;opacity:.85}
+@keyframes cae{to{transform:translateY(125vh) rotate(360deg)}}
+.s.oscura .cuerpo{position:relative;z-index:1}
+.portada .logo{animation:late 3s ease-in-out infinite}
+@keyframes late{0%,100%{box-shadow:0 0 0 0 rgba(255,255,255,.55),0 .4em 1.2em rgba(0,0,0,.35)}50%{box-shadow:0 0 0 .6em rgba(255,255,255,0),0 .4em 1.2em rgba(0,0,0,.35)}}
+.s.on .portada h1{animation:entra 1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes entra{from{opacity:0;transform:scale(.85)}to{opacity:1;transform:none}}
+.s.on .tit .ico{animation:gira .8s cubic-bezier(.2,.8,.2,1) both}
+@keyframes gira{from{transform:rotate(-180deg) scale(0)}to{transform:none}}
+.s.on .tit h2{animation:desliza .7s .1s cubic-bezier(.2,.8,.2,1) both}
+@keyframes desliza{from{opacity:0;transform:translateX(-1em)}to{opacity:1;transform:none}}
+.card,.paso,.chip,.col{transition:transform .25s,box-shadow .25s}
+.card:hover,.paso:hover,.chip:hover,.col:hover{transform:translateY(-.25em) scale(1.02);box-shadow:0 .6em 1.4em rgba(0,0,0,.14)}
+.card .ce,.pe{display:inline-block}.s.on .card .ce{animation:salta .9s .3s cubic-bezier(.3,1.6,.5,1) both}
+@keyframes salta{from{transform:scale(0) rotate(-20deg)}to{transform:none}}
+.s.on .grande{animation:late2 2.2s ease-in-out 1s infinite}
+@keyframes late2{0%,100%{transform:scale(1)}50%{transform:scale(1.04)}}
+
+@keyframes pulso{0%,100%{box-shadow:0 0 0 0 rgba(46,107,31,.6)}50%{box-shadow:0 0 0 .8em rgba(46,107,31,0)}}
+.confeti{position:fixed;width:.6em;height:.9em;top:-1em;z-index:50;pointer-events:none;animation:conf 2.4s ease-in forwards}
+@keyframes conf{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+.qop{transition:transform .2s}.qop:hover{transform:scale(1.03)}.qop.ok{animation:bien .6s}
+@keyframes bien{50%{transform:scale(1.08)}}
+</style></head><body><div id="esc"><div id="marco">
+<div id="prog"></div>
+<section class="s oscura" data-i="0"><div class="cuerpo"><div class="portada"><img class="logo lg" src="" alt="Agroex">
+        <div class="kicker">Agroexportaciones Chile S.A.</div>
+        <h1>Charla de Seguridad<br><span>Packing de Cerezas</span></h1>
+        <div class="emojis a"><span>🍒</span><span>📦</span><span>🍒</span></div>
+        <div class="rel" style="font-size:1.5em"><b>Prevención de Riesgos · Agroex</b></div></div></div></section>
+<section class="s " data-i="1"><div class="tit"><span class="ico">🏠</span><h2>¿Para qué estamos aquí?</h2></div><div class="cuerpo"><div class="grande a">Que todos vuelvan sanos a su casa</div><div class="fila"><div class="chip a"><span>👀</span>Conocer los riesgos del packing</div><div class="chip a"><span>🛡️</span>Saber cómo cuidarse</div><div class="chip a"><span>🚫</span>Que nadie se accidente</div></div><div class="nota a">💡 Conocer los riesgos es su derecho: la empresa debe informárselos (DS 44).</div></div></section>
+<section class="s " data-i="2"><div class="tit"><span class="ico">🍒</span><h2>El viaje de la cereza en el packing</h2></div><div class="cuerpo"><div class="flujo"><div class="fl a"><div class="fl-c">🚚</div><b>Recepción</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">🧺</div><b>Vaciado</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">👀</div><b>Selección</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">📦</div><b>Embalaje</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">🧱</div><b>Paletizado</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">❄️</div><b>Cámaras de frío</b></div><div class="fl-f a">➜</div><div class="fl a"><div class="fl-c">🚛</div><b>Despacho</b></div></div><div class="nota a">💡 En cada etapa hay riesgos. Hoy vamos a ver cómo trabajar seguro en todas.</div></div></section>
+<section class="s " data-i="3"><div class="tit"><span class="ico">⭐</span><h2>Las 3 reglas de oro</h2></div><div class="cuerpo"><div class="pasos"><div class="paso a"><div class="num">1</div><div class="pe">❓</div><div><b>Si no sabe, pregunte</b><small>Nadie lo va a retar por preguntar.</small></div></div><div class="paso a"><div class="num">2</div><div class="pe">✋</div><div><b>Si no es seguro, no lo haga</b><small>Pare y avísele a su jefe.</small></div></div><div class="paso a"><div class="num">3</div><div class="pe">📣</div><div><b>Avise de inmediato cualquier cosa</b><small>Un peligro, una falla o un accidente, aunque sea pequeño.</small></div></div></div></div></section>
+<section class="s " data-i="4"><div class="tit"><span class="ico">⚠️</span><h2>Los riesgos del packing</h2></div><div class="cuerpo"><div class="grid c4"><div class="card a"><div class="ce">⚙️</div><b>Atrapamiento en la línea</b></div><div class="card a"><div class="ce">🚜</div><b>Grúa horquilla</b></div><div class="card a"><div class="ce">💧</div><b>Resbalones y caídas</b></div><div class="card a"><div class="ce">🏋️</div><b>Dolor de espalda</b></div><div class="card a"><div class="ce">📦</div><b>Caída de cajas</b></div><div class="card a"><div class="ce">❄️</div><b>Frío en cámaras</b></div><div class="card a"><div class="ce">✂️</div><b>Cortes</b></div><div class="card a"><div class="ce">🧍</div><b>Muchas horas de pie</b></div></div></div></section>
+<section class="s " data-i="5"><div class="tit"><span class="ico">🎮</span><h2>Juguemos: ¿quién lo hace bien?</h2></div><div class="cuerpo"><div class="grande a">Levante la mano: ¿A o B?</div><div class="fila"><div class="chip a"><span>👀</span>Mire a los dos compañeros</div><div class="chip a"><span>🙋</span>Vote levantando la mano</div><div class="chip a"><span>🏆</span>Veamos quién acierta más</div></div><div class="nota a">💡 Le mostraremos 6 situaciones del packing. ¡Atentos!</div></div></section>
+<section class="s " data-i="6"><div class="tit"><span class="ico">⚙️</span><h2>En la línea de selección</h2></div><div class="cuerpo"><div class="animw juego" data-ok="A"><div class="animbox a"><div class="esc" data-esc="linea_q" data-r="linea"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Nunca meta la mano con la línea andando</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Si se atasca, avise para que la detengan</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>Pelo tomado y cofia, sin joyas</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Nunca saque las protecciones</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="7"><div class="tit"><span class="ico">⚙️</span><h2>La línea: sí y nunca</h2></div><div class="cuerpo"><div class="sino"><div class="col si a"><h3>✅ Sí, hágalo</h3><p>Use cofia y pelo tomado</p><p>Trabaje sin anillos, pulseras ni colgantes</p><p>Mantenga las manos sobre la fruta</p><p>Avise si algo suena o se traba</p></div>
+        <div class="col no a"><h3>❌ Nunca</h3><p>Meter la mano con la línea andando</p><p>Retirar o pasar por alto una protección</p><p>Apoyarse o sentarse en la línea</p><p>Pasar por encima o por debajo de la línea</p></div></div></div></section>
+<section class="s " data-i="8"><div class="tit"><span class="ico">🏋️</span><h2>Levantar una caja</h2></div><div class="cuerpo"><div class="animw juego" data-ok="B"><div class="animbox a"><div class="esc" data-esc="carga_q" data-r="carga"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Doble las rodillas, no la espalda</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Caja pegada al cuerpo</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>No gire la cintura con carga</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Si pesa mucho, pida ayuda</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="9"><div class="tit"><span class="ico">💧</span><h2>Piso mojado</h2></div><div class="cuerpo"><div class="animw juego" data-ok="B"><div class="animbox a"><div class="esc" data-esc="piso_q" data-r="piso"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Camine, nunca corra</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Respete la señal de piso mojado</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>Si ve agua o fruta en el piso, avise</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Use su calzado de seguridad</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="10"><div class="tit"><span class="ico">🚜</span><h2>La grúa horquilla</h2></div><div class="cuerpo"><div class="animw juego" data-ok="A"><div class="animbox a"><div class="esc" data-esc="grua_q" data-r="grua"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Camine por los pasillos peatonales</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Espere que el operador lo vea</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>Nunca camine distraído con el celular</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Respete las zonas demarcadas</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="11"><div class="tit"><span class="ico">🚜</span><h2>Grúa horquilla: sí y nunca</h2></div><div class="cuerpo"><div class="sino"><div class="col si a"><h3>✅ Sí, hágalo</h3><p>Mire a los dos lados antes de cruzar</p><p>Haga contacto visual con el operador</p><p>Mantenga distancia de la grúa</p><p>Avise si ve una grúa en mal estado</p></div>
+        <div class="col no a"><h3>❌ Nunca</h3><p>Manejar la grúa sin estar autorizado</p><p>Pasar bajo una carga levantada</p><p>Subirse a la horquilla o al pallet</p><p>Caminar detrás de una grúa que retrocede</p></div></div></div></section>
+<section class="s " data-i="12"><div class="tit"><span class="ico">📦</span><h2>Apilar cajas y pallets</h2></div><div class="cuerpo"><div class="animw juego" data-ok="B"><div class="animbox a"><div class="esc" data-esc="pallet_q" data-r="pallet"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Nunca se suba a cajas ni a pallets</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Apile solo hasta la altura indicada</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>Ruma derecha y pareja</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Si una ruma se ladea, aléjese y avise</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="13"><div class="tit"><span class="ico">❄️</span><h2>Cámaras de frío</h2></div><div class="cuerpo"><div class="animw juego" data-ok="A"><div class="animbox a"><div class="esc" data-esc="frio_q" data-r="frio"></div></div>
+        <div><div class="jq a"><div class="jp">¿Quién lo hace bien?</div><div class="jb"><button class="jv" data-v="A">🙋 A</button><button class="jv" data-v="B">🙋 B</button></div><div class="jn">Levanten la mano y toque la respuesta</div></div>
+        <div class="jr"><div class="jres qres"></div><div class="pasos chico"><div class="paso"><div class="num">1</div><div><b>Entre con su ropa térmica completa</b></div></div><div class="paso"><div class="num" style="background:var(--v)">2</div><div><b>Entre solo si le corresponde</b></div></div><div class="paso"><div class="num" style="background:var(--v)">3</div><div><b>Avise cuando entra y cuando sale</b></div></div><div class="paso"><div class="num" style="background:var(--v)">4</div><div><b>Si siente mucho frío o mareo, salga y avise</b></div></div></div></div></div></div></div></section>
+<section class="s " data-i="14"><div class="tit"><span class="ico">🧍</span><h2>Cuide su cuerpo en la jornada</h2></div><div class="cuerpo"><div class="grid c4"><div class="card a"><div class="ce">🔄</div><b>Cambie de postura</b><small>No esté rígido todo el turno.</small></div><div class="card a"><div class="ce">🤸</div><b>Estírese</b><small>Aproveche las pausas.</small></div><div class="card a"><div class="ce">💧</div><b>Tome agua</b><small>Durante toda la jornada.</small></div><div class="card a"><div class="ce">🙋</div><b>Si le duele, avise</b><small>No espere a que empeore.</small></div></div></div></section>
+<section class="s " data-i="15"><div class="tit"><span class="ico">🦺</span><h2>Sus elementos de protección</h2></div><div class="cuerpo"><div class="grid c5"><div class="card a"><div class="ce">👷</div><b>Cofia y pechera</b><small>Siempre en la línea</small></div><div class="card a"><div class="ce">🧤</div><b>Guantes</b><small>Cuando la tarea lo pida</small></div><div class="card a"><div class="ce">🥾</div><b>Calzado de seguridad</b><small>Cerrado y antideslizante</small></div><div class="card a"><div class="ce">🧥</div><b>Ropa térmica</b><small>En las cámaras de frío</small></div><div class="card a"><div class="ce">🎧</div><b>Protector auditivo</b><small>Donde se indique</small></div></div><div class="nota a">Son gratis (Ley 16.744). Úselos siempre y pida cambio si se rompen.</div></div></section>
+<section class="s " data-i="16"><div class="tit"><span class="ico">🧼</span><h2>Higiene en el packing</h2></div><div class="cuerpo"><div class="grid c4"><div class="card a"><div class="ce">🧼</div><b>Manos limpias</b><small>Al entrar, después del baño y de comer.</small></div><div class="card a"><div class="ce">💍</div><b>Sin joyas ni accesorios</b><small>Ni anillos, ni pulseras, ni aros.</small></div><div class="card a"><div class="ce">🍽️</div><b>Coma solo donde corresponde</b><small>Nunca en la línea.</small></div><div class="card a"><div class="ce">🗑️</div><b>Basura en su lugar</b><small>El packing limpio es más seguro.</small></div></div></div></section>
+<section class="s " data-i="17"><div class="tit"><span class="ico">🛡️</span><h2>Cero accidentes: depende de todos</h2></div><div class="cuerpo"><div class="pasos"><div class="paso a"><div class="num">1</div><div class="pe">👀</div><div><b>Trabaje atento</b><small>Un accidente se evita antes de que pase.</small></div></div><div class="paso a"><div class="num">2</div><div class="pe">📣</div><div><b>Si ve un peligro, avise</b><small>A su jefe, de inmediato.</small></div></div><div class="paso a"><div class="num">3</div><div class="pe">🤝</div><div><b>Cuide a su compañero</b><small>Si lo ve haciendo algo riesgoso, dígale.</small></div></div><div class="paso a"><div class="num">4</div><div class="pe">🚶</div><div><b>En el camino al trabajo, con cuidado</b><small>Venga directo y atento.</small></div></div></div></div></section>
+<section class="s " data-i="18"><div class="tit"><span class="ico">🚨</span><h2>Emergencias</h2></div><div class="cuerpo"><div class="nums" style="grid-template-columns:repeat(3,1fr)"><div class="nb a"><div>131</div><small>SAMU</small></div><div class="nb a"><div>132</div><small>Bomberos</small></div><div class="nb a"><div>133</div><small>Carabineros</small></div></div><div class="nota a">🔥 Incendio o temblor: siga las vías de evacuación y vaya al punto de encuentro que le indique su jefe.</div></div></section>
+<section class="s " data-i="19"><div class="tit"><span class="ico">🤝</span><h2>Respeto y buen trato</h2></div><div class="cuerpo"><div class="grande a">Tratémonos bien entre todos</div><div class="fila"><div class="chip a"><span>😊</span>Saludo y respeto con todos</div><div class="chip a"><span>🚫</span>Cero insultos, burlas o acoso</div><div class="chip a"><span>🍺</span>Trabajo sin alcohol ni drogas</div></div><div class="nota a">💡 Si ve cualquier irregularidad, infórmela de manera oportuna a su jefe.</div></div></section>
+<section class="s " data-i="20"><div class="tit"><span class="ico">⚖️</span><h2>Sus derechos y sus deberes</h2></div><div class="cuerpo"><div class="sino"><div class="col si a"><h3>🙋 Derechos</h3><p>Saber los riesgos de su trabajo</p><p>Recibir sus elementos de protección</p><p>Ser tratado con respeto</p><p>Conocer el Reglamento Interno</p></div>
+        <div class="col de a"><h3>📋 Deberes</h3><p>Cumplir las normas de seguridad</p><p>Usar sus elementos de protección</p><p>Avisar cualquier problema o peligro</p><p>Cuidar a sus compañeros</p></div></div></div></section>
+<section class="s " data-i="21"><div class="tit"><span class="ico">🎯</span><h2>¿Qué haría usted?</h2></div><div class="cuerpo"><div class="quiz" data-q='[["La línea se atascó con fruta.",["La destapo rápido con la mano","Aviso para que detengan la línea"],1],["Viene una grúa horquilla por el pasillo.",["Espero en la zona segura","Paso corriendo por delante"],0],["Hay agua y cerezas en el piso.",["Aviso y camino con cuidado","Sigo no más, ya pasará otro"],0],["Tengo que levantar una caja del suelo.",["Doblo la espalda con las piernas rectas","Doblo las rodillas y la pego al cuerpo"],1],["Me toca entrar a la cámara de frío.",["Me pongo la ropa térmica","Entro rápido así no más"],0],["Falta poner una caja arriba de la ruma.",["Me subo a las cajas","Pido ayuda a mi jefe"],1],["Tengo el pelo largo.",["Lo tomo y uso cofia","Lo dejo suelto"],0],["Un compañero mete la mano a la línea andando.",["No es mi problema","Le digo que pare y aviso"],1]]'></div></div></section>
+<section class="s oscura" data-i="22"><div class="cuerpo"><div class="portada"><div class="emojis a"><span>🏠</span><span>❤️</span></div>
+        <h1>Trabajo seguro<br><span>= vuelvo a mi casa</span></h1>
+        <div class="kicker a">¿Preguntas?</div>
+        <div class="firma a">✍️ Ahora pase a firmar toda su documentación de prevención de riesgos</div>
+        <img class="logo chico a lg" src="" alt="Agroex"></div></div></section>
+<div id="nav"><button id="ant">◀ Atrás</button><span id="pie">Creado por Daniel Zunino · Integra Prevención SpA · <span id="cont"></span></span><span><button id="pant">⛶</button> <button id="sig">Siguiente ▶</button></span></div>
+</div></div>
+<script>
+const LOGO='data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAwICQsJCAwLCgsODQwOEh4UEhEREiUbHBYeLCcuLisnKyoxN0Y7MTRCNCorPVM+QkhKTk9OLztWXFVMW0ZNTkv/2wBDAQ0ODhIQEiQUFCRLMisyS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0v/wAARCABUAG4DASIAAhEBAxEB/8QAGwAAAgMBAQEAAAAAAAAAAAAAAAYBAwUEBwL/xAA8EAACAQMCAwQHBAgHAAAAAAABAgMABBEFEgYhMRNBUWEUIkJxgZGhByPB0TIzUnKSseHwFSRDU2KEwv/EABkBAAMBAQEAAAAAAAAAAAAAAAACBAMBBf/EAC4RAAIBAwIEBQEJAAAAAAAAAAECAAMEERIxEyFBUQUiMoGRYRQVM1JxocHR8P/aAAwDAQACEQMRAD8A9VoooohCoqHdUQszBVAySTgClbV+LFXdFpwDn/eYcvgO+lZgu8R6ioMtGS6vILOPtLiVI18WOM0vXvGMCZWzgaU/tv6o+XWlK4uJbmUyzyNI59pjmq6nasTtIHu2Pp5TXueJdTuCcTiFfCNcfXrXzb6mJHX0gR5A5yXDySAn90HFZsMTzSBI0Z2PcvWnDh3RJbd1nuYrYDHJdu98+O7oPhSpqYxafEqNvOyyhvbmBJF1ERxEeqsVqE5eW6tS2hMKYaaSUn2nIz9KtFVzNKo+6jDnzfb+FVgYnpKuJbRWfJc6iv6NhE3/AGcf+apbVL6HnNo9yV8YZEk+mQaM4mwpsdsfImtRWRbcRadPMIHla3nP+lcIY2+vWtbNAIO0VkZOTDEmoPSppa4vv9RsPRhpk4NzcNsjgMasDgFmbPXoKYDJxFld/Bfao0kmpN6Bp0XMpkFmHicUs6ibd7hnsomS1GEQkHLEDqfOvQNPuINY0m3uCivFcRq5VhkZ7x8DWXd63w2Fa0lkhkWIlSscLOqn3qMZrJqJblJalDX1iTRTZctwuplQdkJIgY2yHCqfM4wD51iTaPPFH27vbrbFN5uDKOyA7hu76wai6yR7d1+s6+HtKm1Jh2pxZKfXAfaWPw5/OnmCGO3hSKJAkaDCqOgFee2Gq3OjS9lHNGyvh2jKnp4gHBpoi4v0dh97ddg+eaSKcgePLPLzrakMeXHOVW5VRp6zeorkk1Ozjlto3uEDXX6jnyk7+R6VLahapfJZNMvpMiF1j79o7/dWuJXOqoqaKITj1HTbXUrdobyFZUPTI5jzB7qT9N1xuHNTvNJv5nmtYecLtzZRyIHuwfpTxNMkMTySsERFLMx6ADvrzC0spOLtev509SM+vk9wyAo+QqesSCNO89Xw9FqI4rHyAfBz0nqVJ9xLqF/xbPcadbwXCaZH6OO2lKAO3NiMA5OOVN5bHWuaw06209ZVto9nbSNK5LElmPU5NVKcTyom2kl9Z6HxBpGwRXlurTQpExYCOTmQp78c607K/h0ngOO901I3ENsrYPQvy3Zx35zW+dOtjqIv+zxciLst4J5rnOCOh51nXHCOi3DyM1oV7Q5dY5GRSf3QcU+pTvOTB0zXoNJXW5rqC4dHv2OUjymSq+qSeQ+NcMWmXOm3ugW2oBVtp72SfsVOUjY42Jnof6mnmHR7GGG5hWBTHdOXmR/WDkgDofcK+DoWnmwNi0Ja23BlRnY7COm0k5XHdiu8QZhiLP2jhBJpLpj0jtmUeJTAz8OlJ+nyzIJWWLc5kbe3aAH3fKnriXh/1I7q3W6up19Us8hchfj+HxpRubFBMwkGH6OEcjPkcdaneqoGkj3kVw2GwRLLO7EOiTWWptKttGS9ssQBaN85Uhu7B8PGmHgvU7U+m3WpzbdUdlE8kpAG32Qvly+dLTQxtsyuezOVHcKvs9Pkv7xFt0DT4wDuxypRcZBHeIly2289GXWdPae4hF0hktlLSjn6oAyTXT6VCbYXHaKISm/eTgbcZzmk6SPSOHbSZNRl9Ju5wA8MTHJH7J58hnxrBjbVOJ5BZWMZhsYzyj3ExxjzJ6+75CuNVAGBv2nvWtlUrLxKnlXqT/Hed/Eevz8Q3K6VpCs8LNgkcjKfwUU4cOaNHounLAhDSt60r/tN+Q7q+OHuHrXQ4MR/eXDj7yZhzPkPAeVbGKEQ51NvHurlCgoUBhB8k9zMTQr06zLcXu77iOUwwJ3ADGWPmc/AVuV5xZX13wVqc1rcwtLYzNuUjlkdzL546im6x4p0i9UbL2NGPsynYfrXEqAjB3hdWjq2umModiJs0VQl5buMrPEw8Q4ND3lsgy1xEo83ArXIkOlu0vorMuOIdJt/1mo2wPgHDH6Vk3XHmkwg9j21w3/BMD5mlNRRuZtTta9T0oT7RjuhI1vIsIUyFSFD5xnzxXmNzF2FxJEWRijYJT9HPlXZqfHN5fxSQWdqsKOMFtxZ8fDAFY9hpOp6xMIolOPaLHCqPOpqtQOQF5x6vhDHHHcIPqefxCW7hi5Ftx8F51ZZajqVxutdJhdXk5O0QzIR4bvZHuxTXpnAFlBhr6Z7lh7I9RPzNNNpZ29nCIraFIYx7KLgULRc8ycTWmLCz50l1t3O3x/v1iVo3AbM4n1iXJJyYY2yT+835fOne1tYbSFYbeJYol6KowBVtTVKU1TaYXF1VuDmofbpIqaKKeTSi7s7e9hMN1CksZ6q4yKWbzgHTJiTbyT2+e4MGX5H86bailZFbcTelc1qP4bEREf7OBn7vUf4of61CfZwPb1H+GD+tNuq6l/h4jCRdrJJuIUuEACjLEseQGP51SvEOn7RvlZTyDDYWCkgN1AI5AjJBwM0n2dO0q+9bz8/7D+phwfZ5YIfvru4k8l2r+Fadrwfotuc+hiVh3ysW+nSupuItMUN/mQSvUBGJ7uWMeYr6XX9OeZIknLNIwRdqMQSQDyOPAj3ZFMKKjZZi99cv6nMWuKrqCJl060t1gSI7nKrtDHuGO8UxcOWEVnpyMkTpJKAz9ofWPh7q55nsb3iVbSa33T20IcOWGOZ5Ajv/vlU23EtsxuGuAsEUEhjLb95zuKjIA5Zxy+FC0yGyZ5wQ8QuxzNzFTWW+v6ehkDTMDGdpXsmyTkg4GOeMHOOmKrfiTT0n7PtHZQGJkWNioI28gccydw6VpgzabFFZY4h00uirOWLlQu2NiCSMgZx4c/KtSuYhCiiiiEKKKKITj1DT4dQVFmMilCSrxuVZcjB5jxBxXKeH7DsRCqSJGpzhZCORUKV9xCjIooroJhPh+GtNcyt2LK8xJZgxyCW35Hx/KrH0CxdUQrJtjlEoG882wBz/hH9miiu5MJ9nRbQ6kuo4k9IViww52gkbSceYA+VVvw/aPFJE73LQyPvMRmbaCSWyB3czn5UUUAmE49P0W2u4ppJXnMhuJlVxKQUAkcer4Zyc+Oa7JOHrCWJYyjqi7iArkAbsH+aqR7qKK6ScwkycP2MkAhZZOzDhyN55kALz+AFag6UUUphJooorkJ//9k=';document.querySelectorAll('.lg').forEach(x=>x.src=LOGO);
+const S=[...document.querySelectorAll('.s')];let i=0;
+function ir(n){i=Math.max(0,Math.min(S.length-1,n));S.forEach((s,k)=>s.classList.toggle('on',k===i));
+document.getElementById('prog').style.width=(100*(i+1)/S.length)+'%';document.getElementById('cont').textContent=(i+1)+' / '+S.length;
+document.getElementById('ant').style.visibility=i?'visible':'hidden';document.getElementById('sig').style.visibility=i<S.length-1?'visible':'hidden';
+const oscura=S[i].classList.contains('oscura');document.getElementById('pie').style.color=oscura?'#C9D6FF':'#5A6275';document.getElementById('cont').style.color=oscura?'#C9D6FF':'#5A6275';}
+function ver(j,v){if(j.classList.contains('ver'))return;const ok=j.dataset.ok;j.classList.add('ver');const e=j.querySelector('.esc');e.dataset.esc=e.dataset.r;
+ const r=j.querySelector('.jres');r.style.color=(!v||v===ok)?'#2E7D32':'#D7262B';r.textContent=v?(v===ok?'✅ ¡Correcto! Lo hace bien el '+ok:'❌ No. Lo hace bien el '+ok):'👉 Correcto: lo hace bien el '+ok;
+ j.querySelectorAll('.paso').forEach((p,k)=>{p.style.animation='sube .6s '+(.2+k*.15)+'s both'})}
+document.querySelectorAll('.juego').forEach(j=>j.querySelectorAll('.jv').forEach(b=>b.onclick=()=>ver(j,b.dataset.v)));
+function avanza(){const j=S[i].querySelector('.juego');if(j&&!j.classList.contains('ver')){ver(j,null);return}ir(i+1)}
+document.getElementById('ant').onclick=()=>ir(i-1);document.getElementById('sig').onclick=avanza;
+document.getElementById('pant').onclick=()=>{try{document.fullscreenElement?document.exitFullscreen():document.documentElement.requestFullscreen()}catch(e){}};
+addEventListener('keydown',e=>{if(['ArrowRight','PageDown',' ','Enter'].includes(e.key)){e.preventDefault();avanza()}if(['ArrowLeft','PageUp','Backspace'].includes(e.key)){e.preventDefault();ir(i-1)}});
+let x0=null;addEventListener('touchstart',e=>x0=e.touches[0].clientX,{passive:true});addEventListener('touchend',e=>{if(x0==null)return;const d=e.changedTouches[0].clientX-x0;if(Math.abs(d)>60){d<0?avanza():ir(i-1)};x0=null});
+// quiz
+document.querySelectorAll('.quiz').forEach(q=>{const P=JSON.parse(q.dataset.q);let n=0,pts=0;
+ function pinta(){if(n>=P.length){q.innerHTML='<div class="qp">🎉 ¡Muy bien! '+pts+' de '+P.length+' correctas</div><div class="qn">Lo importante: si tiene dudas, pregunte y avise.</div><button class="qsig" style="visibility:visible">🔄 Jugar de nuevo</button>';q.querySelector('.qsig').onclick=()=>{n=0;pts=0;pinta()};return}
+  const [t,o,c]=P[n];q.innerHTML='<div class="qn">Pregunta '+(n+1)+' de '+P.length+'</div><div class="qp">'+t+'</div><div class="qops">'+o.map((x,k)=>'<button class="qop" data-k="'+k+'">'+(k?'B':'A')+'. '+x+'</button>').join('')+'</div><div class="qres"></div><button class="qsig">Siguiente pregunta ▶</button>';
+  q.querySelectorAll('.qop').forEach(b=>b.onclick=()=>{if(q.dataset.r)return;q.dataset.r=1;const k=+b.dataset.k;q.querySelectorAll('.qop')[c].classList.add('ok');
+   if(k===c){pts++;q.querySelector('.qres').textContent='✅ ¡Correcto!';q.querySelector('.qres').style.color='#2E6B1F'}else{b.classList.add('mal');q.querySelector('.qres').textContent='❌ No. La segura es la marcada en verde';q.querySelector('.qres').style.color='#B3122B'}
+   q.querySelector('.qsig').style.visibility='visible'});
+  q.querySelector('.qsig').onclick=()=>{delete q.dataset.r;n++;pinta()}}
+ pinta()});
+ir(0);
+// Escenas animadas Agroex (packing de cerezas). ESC[nombre](t), t entre 0 y 1 (loop).
+// Cada escena es un "¿Bien o mal?": dos monitos lado a lado. La version _q oculta cual es cual (A / B) para el juego.
+var ESC = (function () {
+  var L = function (a, b, t) { return a + (b - a) * t; };
+  var cl = function (x) { return Math.max(0, Math.min(1, x)); };
+  var ease = function (x) { x = cl(x); return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; };
+  var rad = function (d) { return d * Math.PI / 180; };
+  var P = function (p, a, l) { return [p[0] + Math.sin(rad(a)) * l, p[1] + Math.cos(rad(a)) * l]; };   // 0 = hacia abajo, 90 = derecha
+  var ln = function (a, b, c, w) { return '<line x1="' + a[0].toFixed(1) + '" y1="' + a[1].toFixed(1) + '" x2="' + b[0].toFixed(1) + '" y2="' + b[1].toFixed(1) + '" stroke="' + c + '" stroke-width="' + (w || 9) + '" stroke-linecap="round"/>'; };
+  var parado = { x: 0, y: 262, t: 0, aL: 20, aL2: 10, aR: -20, aR2: -10, lL: 8, lL2: 0, lR: -8, lR2: 0 };
+  var A = function (o) { return Object.assign({}, parado, o); };
+  var CAM = '#1F5FA8', NCLIP = 0;
+  function neckOf(p) { return [p.x + Math.sin(rad(p.t)) * 52, p.y - Math.cos(rad(p.t)) * 52]; }
+  function manoOf(p, k) { return P(P(neckOf(p), p[k || 'aL'], 28), p[(k || 'aL') + '2'], 26); }
+  // o: { pelo: pelo suelto, termica: ropa termica, polera: manga corta }
+  function persona(p, o) {
+    o = o || {}; var col = o.termica ? '#16307A' : CAM, piel = '#E9B48A';
+    var hip = [p.x, p.y], neck = neckOf(p), head = [neck[0] + Math.sin(rad(p.t)) * 18, neck[1] - Math.cos(rad(p.t)) * 18];
+    var s = '';
+    if (o.pelo) s += '<path d="M' + (head[0] - 12) + ' ' + (head[1] - 8) + ' q-12 26 -6 50 l12 -2 q-4 -22 8 -40 z" fill="#5A3A22"/>';
+    [['lL', 'lL2'], ['lR', 'lR2']].forEach(function (k) { var k1 = P(hip, p[k[0]], 34), k2 = P(k1, p[k[1]], 34); s += ln(hip, k1, '#2F3E57', 10) + ln(k1, k2, '#2F3E57', 9) + ln(k2, [k2[0] + 10, k2[1]], '#222', 8); });
+    s += ln(hip, neck, col, o.termica ? 20 : 16);
+    if (!o.termica) s += ln(P(hip, 180 - p.t, 4), P(hip, 180 - p.t, 40), '#FFFFFF', 9);   // pechera blanca
+    [['aL', 'aL2'], ['aR', 'aR2']].forEach(function (k) { var e = P(neck, p[k[0]], 28), m = P(e, p[k[1]], 26);
+      s += ln(neck, e, o.polera ? piel : col, o.termica ? 11 : 9) + ln(e, m, o.termica ? col : piel, o.termica ? 10 : 8);
+      if (o.termica) s += '<circle cx="' + m[0] + '" cy="' + m[1] + '" r="6" fill="#333"/>'; });
+    s += '<circle cx="' + head[0] + '" cy="' + head[1] + '" r="13" fill="' + piel + '"/>';
+    if (o.termica) s += '<path d="M' + (head[0] - 14) + ' ' + (head[1] - 1) + ' q14 -26 28 0 z" fill="#C62828"/><circle cx="' + head[0] + '" cy="' + (head[1] - 15) + '" r="4" fill="#fff"/>';
+    else if (o.pelo) s += '<path d="M' + (head[0] - 14) + ' ' + (head[1] - 1) + ' q14 -24 28 -2 q-10 -6 -28 2 z" fill="#5A3A22"/>';
+    else s += '<path d="M' + (head[0] - 15) + ' ' + (head[1] - 1) + ' q15 -24 30 0 z" fill="#FFFFFF" stroke="#B9C3D0" stroke-width="2"/>';   // cofia
+    s += '<circle cx="' + (head[0] + 6) + '" cy="' + (head[1] - 1) + '" r="1.8" fill="#333"/>';
+    return s;
+  }
+  function caja(x, y, w, h) {   // caja de cerezas; (x,y) = esquina superior izquierda
+    w = w || 50; h = h || 28;
+    return '<rect x="' + x + '" y="' + y + '" width="' + w + '" height="' + h + '" rx="3" fill="#C8955A" stroke="#8D6237" stroke-width="2"/>' +
+      '<circle cx="' + (x + w / 2 - 5) + '" cy="' + (y + h / 2) + '" r="5" fill="#C8102E"/><circle cx="' + (x + w / 2 + 5) + '" cy="' + (y + h / 2 + 1) + '" r="5" fill="#A50E26"/>' +
+      '<path d="M' + (x + w / 2 - 5) + ' ' + (y + h / 2 - 5) + ' q5 -8 10 -12 M' + (x + w / 2 + 5) + ' ' + (y + h / 2 - 4) + ' l0 -8" stroke="#3E7B27" stroke-width="2" fill="none"/>';
+  }
+  function alerta(x, y, op) { return '<g opacity="' + op.toFixed(2) + '"><circle cx="' + x + '" cy="' + y + '" r="20" fill="#C62828"/><rect x="' + (x - 3) + '" y="' + (y - 12) + '" width="6" height="15" rx="3" fill="#fff"/><circle cx="' + x + '" cy="' + (y + 9) + '" r="3.5" fill="#fff"/></g>'; }
+  function txt(x, y, s, c, fs, op) { return '<text x="' + x + '" y="' + y + '" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="' + (fs || 20) + '" fill="' + c + '"' + (op != null ? ' opacity="' + op.toFixed(2) + '"' : '') + '>' + s + '</text>'; }
+
+  // Marco de dos paneles. dib(ox, bien, t) dibuja cada panel. bienIzq: el correcto va a la izquierda.
+  function dos(t, oc, dib, capMal, capBien, bienIzq) {
+    var s = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400"><rect width="640" height="400" fill="#fff"/>', uid = 'k' + (++NCLIP) + '_';
+    [0, 320].forEach(function (ox) {
+      var izq = ox === 0, bien = izq ? bienIzq : !bienIzq, c = oc ? '#1B2A6B' : (bien ? '#2E7D32' : '#C62828');
+      var p = '<defs><clipPath id="' + uid + ox + '"><rect x="' + ox + '" y="0" width="320" height="400"/></clipPath></defs><g clip-path="url(#' + uid + ox + ')">';
+      p += '<rect x="' + ox + '" y="0" width="320" height="400" fill="' + (oc ? '#EEF3F9' : (bien ? '#E6F4E7' : '#FDEBEC')) + '"/>';
+      p += '<rect x="' + ox + '" y="330" width="320" height="70" fill="#A7B0BC"/><rect x="' + ox + '" y="330" width="320" height="5" fill="#8D97A3"/>';
+      p += dib(ox, bien, t);
+      p += '<rect x="' + (ox + 14) + '" y="12" width="292" height="48" rx="12" fill="' + c + '"/>';
+      if (oc) p += txt(ox + 160, 47, izq ? 'A' : 'B', '#fff', 32);
+      else {
+        p += txt(ox + 172, 45, bien ? 'BIEN' : 'MAL', '#fff', 26) + '<circle cx="' + (ox + 110) + '" cy="36" r="15" fill="#fff"/>';
+        p += bien ? '<path d="M' + (ox + 102) + ' 37 l6 6 l11 -12" stroke="#2E7D32" stroke-width="4.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>'
+                  : '<path d="M' + (ox + 104) + ' 30 l12 12 M' + (ox + 116) + ' 30 l-12 12" stroke="#C62828" stroke-width="4.5" stroke-linecap="round"/>';
+      }
+      p += '<rect x="' + ox + '" y="350" width="320" height="38" fill="' + (oc ? '#1B2A6B' : c) + '"/>';
+      p += txt(ox + 160, 376, oc ? '¿Lo hace bien?' : (bien ? capBien : capMal), '#fff', 19);
+      s += p + '</g>';
+    });
+    return s + '<rect x="317" y="0" width="6" height="400" fill="#fff"/></svg>';
+  }
+
+  // 1) Levantar una caja
+  function dCarga(ox, bien, t) {
+    var u = .5 - .5 * Math.cos(t * Math.PI * 2), s = '';
+    if (!bien) {
+      var p = A({ x: ox + 120, t: L(80, 12, u), aL: 0, aL2: 0, aR: 6, aR2: 0, lL: 0, lL2: 0, lR: 0, lR2: 0 });
+      var m = manoOf(p), dolor = 1 - u;
+      s += persona(p) + caja(m[0] - 22, Math.min(302, m[1] - 4));
+      s += '<path d="M' + (ox + 112) + ' 238 l10 -10 l-2 14 l12 -8" stroke="#E53935" stroke-width="4" fill="none" stroke-linejoin="round" opacity="' + dolor.toFixed(2) + '"/>';
+      s += txt(ox + 70, 200, '¡Ay!', '#C62828', 30, dolor);
+    } else {
+      var q = 1 - u, a1 = L(0, 90, q), a2 = L(0, -20, q), fx = ox + 130;
+      var p2 = A({ x: fx - 34 * (Math.sin(rad(a1)) + Math.sin(rad(a2))), y: 330 - 34 * (Math.cos(rad(a1)) + Math.cos(rad(a2))), t: L(4, 22, q),
+        aL: L(10, 15, q), aL2: L(100, 15, q), aR: L(5, 10, q), aR2: L(95, 10, q), lL: a1, lL2: a2, lR: a1 - 6, lR2: a2 });
+      var m2 = manoOf(p2);
+      s += persona(p2) + caja(m2[0] - 12, Math.min(302, m2[1] - 8));
+    }
+    return s;
+  }
+  // 2) Linea de seleccion (correa y rodillo)
+  function dLinea(ox, bien, t) {
+    var s = '', rx = ox + 152, ry = 258, osc = .5 + .5 * Math.sin(t * Math.PI * 8);
+    var cinta = '<rect x="' + rx + '" y="' + (ry - 8) + '" width="200" height="14" fill="#37474F"/>';
+    for (var k = 0; k < 8; k++) { var dx = (k * 26 + t * 260) % 200; cinta += '<rect x="' + (rx + 200 - dx) + '" y="' + (ry - 6) + '" width="10" height="3" fill="#90A4AE"/>'; }
+    for (var j = 0; j < 7; j++) { var cx = rx + 200 - ((j * 31 + t * 200) % 200); cinta += '<circle cx="' + cx + '" cy="' + (ry - 14) + '" r="6" fill="#C8102E"/>'; }
+    cinta += '<rect x="' + (rx + 30) + '" y="' + (ry + 6) + '" width="10" height="66" fill="#78909C"/><rect x="' + (rx + 140) + '" y="' + (ry + 6) + '" width="10" height="66" fill="#78909C"/>';
+    cinta += '<g transform="rotate(' + (t * 720) + ' ' + rx + ' ' + ry + ')"><circle cx="' + rx + '" cy="' + ry + '" r="11" fill="#546E7A"/><line x1="' + (rx - 9) + '" y1="' + ry + '" x2="' + (rx + 9) + '" y2="' + ry + '" stroke="#CFD8DC" stroke-width="3"/></g>';
+    if (!bien) {
+      s += cinta + persona(A({ x: ox + 104, t: 20, aL: 35, aL2: L(32, 40, osc), aR: 0, aR2: -10 }), { pelo: true });
+      s += '<circle cx="' + rx + '" cy="' + ry + '" r="22" fill="none" stroke="#E53935" stroke-width="5" opacity="' + osc.toFixed(2) + '"/>' + alerta(ox + 60, 150, osc);
+    } else {
+      s += persona(A({ x: ox + 230, t: 10, aL: 25, aL2: L(48, 75, osc), aR: 30, aR2: L(70, 50, osc) })) + cinta;   // monito detras de la correa
+      s += '<path d="M' + (rx - 18) + ' ' + (ry + 14) + ' v-22 a18 18 0 0 1 36 0 v22 z" fill="#FFC107" stroke="#8D6E00" stroke-width="2"/>';
+      s += '<path d="M' + (rx - 12) + ' ' + (ry - 4) + ' l10 -10 M' + (rx - 4) + ' ' + (ry + 10) + ' l18 -18" stroke="#333" stroke-width="4"/>';
+    }
+    return s;
+  }
+  // 3) Piso mojado
+  function dPiso(ox, bien, t) {
+    var s = '<ellipse cx="' + (ox + 215) + '" cy="336" rx="52" ry="8" fill="#81D4FA" opacity=".9"/><circle cx="' + (ox + 200) + '" cy="334" r="4" fill="#C8102E"/><circle cx="' + (ox + 232) + '" cy="337" r="4" fill="#C8102E"/>';
+    if (!bien) {
+      if (t < .55) {
+        var ph = Math.sin(t * Math.PI * 2 * 5), x = ox + 30 + t / .55 * 135;
+        s += persona(A({ x: x, y: 270, t: 16, aL: -45 * ph, aL2: -45 * ph - 70, aR: 45 * ph, aR2: 45 * ph - 70, lL: 38 * ph, lL2: 38 * ph - 30, lR: -38 * ph, lR2: -38 * ph - 30 }));
+      } else {
+        var f = ease((t - .55) / .22), fx = ox + 175;
+        s += '<g transform="rotate(' + (-75 * f) + ' ' + fx + ' 328)">' + persona(A({ x: fx, t: -10 * f, aL: -120 * f, aL2: -150 * f, aR: -90 * f, aR2: -120 * f, lL: 70 * f, lL2: 70 * f, lR: 40 * f, lR2: 40 * f })) + '</g>';
+        s += alerta(ox + 90, 150, cl(f * 2));
+      }
+    } else {
+      var w = ease(cl(t / .6)), ph2 = t < .6 ? Math.sin(t * Math.PI * 2 * 3) : 0;
+      s += persona(A({ x: ox + 40 + 90 * w, aL: -18 * ph2, aL2: -18 * ph2, aR: 18 * ph2, aR2: 18 * ph2, lL: 16 * ph2, lL2: 16 * ph2 - 4, lR: -16 * ph2, lR2: -16 * ph2 - 4 }));
+      var cx = ox + 205;   // letrero piso mojado
+      s += '<path d="M' + (cx - 24) + ' 334 L' + (cx - 10) + ' 262 L' + (cx + 10) + ' 262 L' + (cx + 24) + ' 334 Z" fill="#FFC107" stroke="#8D6E00" stroke-width="3"/>';
+      s += '<path d="M' + cx + ' 278 l-12 24 h24 z" fill="none" stroke="#222" stroke-width="3"/>' + txt(cx, 299, '!', '#222', 14);
+      s += txt(cx, 252, 'PISO MOJADO', '#8D6E00', 13);
+    }
+    return s;
+  }
+  // 4) Grua horquilla
+  function grua(x) {
+    var s = '<rect x="' + (x - 70) + '" y="268" width="80" height="48" rx="8" fill="#F2B705"/><rect x="' + (x - 82) + '" y="274" width="16" height="40" rx="4" fill="#555"/>';
+    s += ln([x - 58, 268], [x - 52, 212], '#333', 5) + ln([x - 4, 268], [x - 4, 212], '#333', 5) + ln([x - 58, 212], [x - 2, 212], '#333', 6);
+    s += ln([x - 30, 252], [x - 34, 270], CAM, 12) + '<circle cx="' + (x - 28) + '" cy="240" r="10" fill="#E9B48A"/><path d="M' + (x - 39) + ' 238 q11 -18 22 0 z" fill="#FFFFFF"/>';
+    s += '<circle cx="' + (x - 52) + '" cy="318" r="15" fill="#263238"/><circle cx="' + (x - 52) + '" cy="318" r="6" fill="#90A4AE"/><circle cx="' + (x - 2) + '" cy="320" r="13" fill="#263238"/><circle cx="' + (x - 2) + '" cy="320" r="5" fill="#90A4AE"/>';
+    s += '<rect x="' + (x + 12) + '" y="200" width="8" height="128" fill="#616161"/><rect x="' + (x + 18) + '" y="322" width="44" height="6" fill="#424242"/>';
+    s += '<rect x="' + (x + 20) + '" y="314" width="42" height="8" fill="#8D6237"/>' + caja(x + 21, 286, 40, 28);
+    return s;
+  }
+  function dGrua(ox, bien, t) {
+    var s = '';
+    if (!bien) {
+      var gx = ox + L(-40, 172, ease(cl(t / .75)));
+      s += persona(A({ x: ox + 262, t: 8, aL: 10, aL2: 150, aR: 0, aR2: 0 })) + '<rect x="' + (ox + 282) + '" y="214" width="10" height="16" rx="2" fill="#111"/>';
+      s += grua(gx) + alerta(ox + 262, 130, cl((t - .5) * 3) * (.6 + .4 * Math.sin(t * Math.PI * 16)));
+    } else {
+      s += '<polygon points="' + (ox + 214) + ',335 ' + (ox + 226) + ',335 ' + (ox + 230) + ',350 ' + (ox + 222) + ',350" fill="#FFD600"/>';
+      s += '<rect x="' + (ox + 230) + '" y="236" width="6" height="96" fill="#333"/><circle cx="' + (ox + 233) + '" cy="230" r="17" fill="#C62828" stroke="#fff" stroke-width="3"/>' + txt(ox + 233, 234, 'PARE', '#fff', 10);
+      s += persona(A({ x: ox + 272, aR: -150, aR2: -170 }));
+      s += grua(ox + L(-50, 110, .5 - .5 * Math.cos(t * Math.PI * 2)));
+    }
+    return s;
+  }
+  // 5) Apilar cajas
+  function dPallet(ox, bien, t) {
+    var s = '', w = Math.sin(t * Math.PI * 4);
+    if (!bien) {
+      var torre = '<rect x="' + (ox + 165) + '" y="320" width="64" height="10" fill="#8D6237"/>';
+      for (var k = 0; k < 7; k++) torre += caja(ox + 172, 292 - k * 28);
+      s += '<g transform="rotate(' + (3 * w) + ' ' + (ox + 197) + ' 330)">' + torre + '</g>';
+      for (var j = 0; j < 2; j++) s += caja(ox + 70, 302 - j * 28);
+      var p = A({ x: ox + 98, y: 330 - 56 - 68, t: 18 + 4 * w, aL: 150, aL2: 165, aR: 140, aR2: 160, lL: 8, lR: -8 });
+      var m = manoOf(p);
+      s += persona(p) + caja(m[0] - 10, m[1] - 26);
+      s += alerta(ox + 45, 120, .6 + .4 * w);
+    } else {
+      s += '<rect x="' + (ox + 175) + '" y="320" width="64" height="10" fill="#8D6237"/>';
+      for (var i = 0; i < 4; i++) s += caja(ox + 182, 292 - i * 28);
+      var u = ease(cl(t / .7)), p2 = A({ x: ox + 120, t: 6, aL: L(60, 75, u), aL2: L(100, 95, u), aR: L(55, 70, u), aR2: L(95, 90, u) });
+      var m2 = manoOf(p2), bx = L(m2[0] - 10, ox + 182, u), by = L(m2[1] - 22, 292 - 4 * 28, u);
+      s += persona(p2) + caja(bx, by);
+    }
+    return s;
+  }
+  // 6) Camara de frio
+  function dFrio(ox, bien, t) {
+    var s = '<rect x="' + ox + '" y="0" width="320" height="330" fill="#CFE8FB" opacity=".75"/>';
+    for (var k = 0; k < 14; k++) { var x = ox + (k * 47 % 320), y = 70 + (k * 61 + t * 260) % 260; s += txt(x, y, '❄', '#FFFFFF', 16); }
+    s += '<rect x="' + (ox + 230) + '" y="140" width="70" height="190" fill="#B0BEC5" stroke="#78909C" stroke-width="3"/><rect x="' + (ox + 238) + '" y="230" width="8" height="26" rx="3" fill="#455A64"/>';
+    if (!bien) {
+      var j = Math.sin(t * Math.PI * 40) * 2.5;
+      s += persona(A({ x: ox + 130 + j, t: 4, aL: 70, aL2: -120, aR: 60, aR2: -110 }), { polera: true });
+      s += txt(ox + 70, 170, 'brrr', '#1565C0', 24);
+    } else {
+      s += persona(A({ x: ox + 130, t: 3, aL: 20, aL2: 70, aR: -10, aR2: 40 }), { termica: true });
+    }
+    return s;
+  }
+
+  var E = {}, defs = {
+    carga: [dCarga, 'Dobla la espalda', 'Dobla las rodillas', false],
+    linea: [dLinea, 'Mano en la línea andando', 'Manos lejos del rodillo', true],
+    piso: [dPiso, 'Corre con piso mojado', 'Camina y respeta la señal', false],
+    grua: [dGrua, 'Distraído junto a la grúa', 'Espera en la zona segura', true],
+    pallet: [dPallet, 'Se sube a las cajas', 'Apila sin subirse a nada', false],
+    frio: [dFrio, 'Entra sin ropa térmica', 'Con ropa térmica completa', true],
+  };
+  Object.keys(defs).forEach(function (k) { var d = defs[k];
+    E[k] = function (t) { return dos(t, false, d[0], d[1], d[2], d[3]); };
+    E[k + '_q'] = function (t) { return dos(t, true, d[0], d[1], d[2], d[3]); }; });
+  E.correcta = function (k) { return defs[k][3] ? 'A' : 'B'; };
+  return E;
+})();
+if (typeof module !== 'undefined') module.exports = ESC;
+
+(function(){
+ document.querySelectorAll('.s.oscura').forEach(s=>{const l=document.createElement('div');l.className='lluvia';const em=['🍒','📦','🍒','🍒','❄️'];
+  for(let k=0;k<22;k++){const e=document.createElement('i');e.textContent=em[k%em.length];e.style.left=(Math.random()*100)+'%';e.style.fontSize=(1.2+Math.random()*1.8)+'em';e.style.animationDuration=(6+Math.random()*7)+'s';e.style.animationDelay=(-Math.random()*12)+'s';l.appendChild(e)}
+  s.prepend(l)});
+ let AC=null,SON=true;const tono=(f,d,tp,v)=>{if(!SON)return;try{AC=AC||new (window.AudioContext||window.webkitAudioContext)();const o=AC.createOscillator(),g=AC.createGain();o.type=tp||'sine';o.frequency.value=f;g.gain.setValueAtTime(v||.18,AC.currentTime);g.gain.exponentialRampToValueAtTime(.001,AC.currentTime+d);o.connect(g);g.connect(AC.destination);o.start();o.stop(AC.currentTime+d)}catch(e){}};
+ const sBien=()=>{tono(880,.18);setTimeout(()=>tono(1320,.35),120)},sMal=()=>tono(180,.35,'triangle',.15),sPaso=()=>tono(520,.07,'sine',.05);
+ const confeti=n=>{const c=['#D7262B','#3C9A3A','#1B2A6B','#2F48A8','#FFD54A'];for(let k=0;k<(n||70);k++){const p=document.createElement('div');p.className='confeti';p.style.left=Math.random()*100+'vw';p.style.background=c[k%c.length];p.style.animationDelay=Math.random()*.6+'s';p.style.borderRadius=k%2?'50%':'2px';document.body.appendChild(p);setTimeout(()=>p.remove(),3200)}};
+ const b=document.createElement('button');b.textContent='🔊';b.title='Sonido';b.onclick=()=>{SON=!SON;b.textContent=SON?'🔊':'🔇'};document.getElementById('pant').before(b,' ');
+ const ir0=ir;ir=function(n){const prev=i;S.forEach((s,k)=>s.classList.toggle('sale',k<n));ir0(n);if(i!==prev)sPaso();if(i===S.length-1&&prev!==i)setTimeout(()=>confeti(90),500)};
+ new MutationObserver(ms=>ms.forEach(m=>{const el=m.target;if(el.classList&&el.classList.contains('qres')&&m.addedNodes.length){if(/Correcto/.test(el.textContent)){sBien();confeti(40)}else sMal()}
+   if(el.classList&&el.classList.contains('quiz')&&/Muy bien/.test(el.textContent)){confeti(120);sBien()}})).observe(document.getElementById('marco'),{subtree:true,childList:true});
+ // escenas animadas: solo corre la de la lamina visible (4 s por vuelta)
+ const t0=performance.now();(function loop(now){const on=S[i];on&&on.querySelectorAll('.esc').forEach(d=>{d.innerHTML=ESC[d.dataset.esc](((now-t0)/4200)%1)});requestAnimationFrame(loop)})(t0);
+})();
+
+</script></body></html>
